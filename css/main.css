@@ -1592,7 +1592,7 @@ pre code {
   width: 100%;
 }
 .with-love {
-  color: #ff0000;
+  color: orange;
   display: inline-block;
   margin: 0 5px;
 }
@@ -2002,7 +2002,7 @@ pre code {
 }
 .posts-expand .post-header {
   font-size: 1.125em;
-  margin-bottom: 60px;
+  margin-bottom: 40px;
   text-align: center;
 }
 .posts-expand .post-title {
@@ -2484,14 +2484,14 @@ ul.breadcrumb li:last-child {
 .custom-logo-image {
   background: #fff;
   margin: 0 auto 10px;
-  max-width: 150px;
+  max-width: 230px;
   padding: 5px;
 }
 .brand {
   background: var(--btn-default-bg);
 }
 .header-inner {
-  padding-top: 100px;
+  padding-top: 60px;
 }
 @media (max-width: 767px) {
   .header-inner {
@@ -2595,7 +2595,7 @@ ul.breadcrumb li:last-child {
   vertical-align: middle;
 }
 .links-of-author a::before {
-  background: #fa73d0;
+  background: #ffe0cb;
   display: inline-block;
   margin-right: 3px;
   transform: translateY(-2px);
@@ -2614,4 +2614,47 @@ ul.breadcrumb li:last-child {
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+:root {
+  --MC: #ffa500;
+/* main color */
+  --SC: #00f; /* sub color */
+  --dark: #000;
+  --light: #fff;
+}
+.brand {
+  background-color: var(--MC);
+}
+.posts-expand .post-gallery {
+  margin-bottom: 60px;
+}
+.post-gallery-image {
+  max-height: 300px;
+}
+.post-button {
+  margin-top: 40px;
+}
+.post-meta-container {
+  margin-top: 5px;
+}
+.post-footer {
+  height: 141px;
+}
+.menu-item a {
+  color: var(--MC);
+}
+.menu-item a:hover {
+  color: var(--SC);
+}
+.menu-item-active a {
+  background-color: #86cc25;
+  color: #86cc25;
+}
+.btn {
+  border: none;
+  background-color: var(--MC);
+}
+.btn:hover {
+  color: #000;
+  background-color: var(--SC);
 }

@@ -82,7 +82,7 @@
 <nav class="site-nav">
   <ul class="main-menu menu">
         <li class="menu-item menu-item-about"><a href="/about/" rel="section"><i class="fas fa-candy-cane fa-fw"></i>关于</a></li>
-        <li class="menu-item menu-item-ocwiki"><a href="/ocwiki/" rel="section"><i class="fas fa-bread-slice fa-fw"></i>OCwiki</a></li>
+        <li class="menu-item menu-item-ocwiki"><a href="/OCwiki/" rel="section"><i class="fas fa-bread-slice fa-fw"></i>OCwiki</a></li>
         <li class="menu-item menu-item-blog"><a href="/" rel="section"><i class="fas fa-egg fa-fw"></i>blog</a></li>
         <li class="menu-item menu-item-tags"><a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>标签</a></li>
         <li class="menu-item menu-item-categories"><a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>分类</a></li>
@@ -189,12 +189,17 @@
       </div>
 
       <div class="post-title">
-          <a class="post-title-link" href="/2021/05/08/hello-world/" itemprop="url">
+          <a class="post-title-link" href="/hello-world/" itemprop="url">
             <span itemprop="name">Hello World</span>
           </a>
       </div>
 
-      
+      <div class="post-gallery" itemscope itemtype="http://schema.org/ImageGallery">
+    
+    <div class="post-gallery-image">
+      <img src="https://img.pawoo.net/media_attachments/files/035/873/666/original/93f879fc410a40f6.png" itemprop="contentUrl">
+    </div>
+    </div>
     </header>
   </article>
 
@@ -215,7 +220,7 @@
   &copy; 
   <span itemprop="copyrightYear">2021</span>
   <span class="with-love">
-    <i class="fa fa-heart"></i>
+    <i class="fas fa-cube"></i>
   </span>
   <span class="author" itemprop="copyrightHolder">皮皮冷藏库</span>
 </div>
@@ -239,6 +244,38 @@
 </div>
   <div class="powered-by">由 <a href="https://hexo.io/" class="theme-link" rel="noopener" target="_blank">Hexo</a> & <a href="https://theme-next.js.org/muse/" class="theme-link" rel="noopener" target="_blank">NexT.Muse</a> 强力驱动
   </div>
+
+<!--添加网站的运行时间-->
+<span id="sitetime"> <br></span>
+<script language="javascript">
+	function siteTime(){
+		window.setTimeout("siteTime()", 1000);
+		var seconds = 1000
+		var minutes = seconds * 60
+		var hours = minutes * 60
+		var days = hours * 24
+		var years = days * 365
+
+		var today = new Date()
+		var todayYear = today.getFullYear()
+		var todayMonth = today.getMonth()
+		var todayDate = today.getDate()
+		var todayHour = today.getHours()
+		var todayMinute = today.getMinutes()
+		var todaySecond = today.getSeconds()
+		var t1 = Date.UTC(2017,4,18,11,00,00)
+		var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
+		var diff = t2-t1
+
+		var diffYears = Math.floor(diff/years)
+		var diffDays = Math.floor((diff/days)-diffYears*365)
+		var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)
+		var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)
+		var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)
+		document.getElementById("sitetime").innerHTML=" 已保持冷藏"+diffDays+" 天 "+diffHours+" 小时 <br>"
+	}
+	siteTime()
+</script>
 
     </div>
   </footer>
