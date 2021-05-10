@@ -2642,7 +2642,6 @@ ul.breadcrumb li:last-child {
   position: sticky;
   top: 12px;
   width: 320px;
-  height: auto;
   align-self: flex-start;
 }
 @media (max-width: 991px) {
@@ -2650,8 +2649,11 @@ ul.breadcrumb li:last-child {
     display: none;
   }
 }
-.main-inner {
-  height: auto;
+@media (max-width: 991px) {
+  .main-inner {
+    display: block;
+    width: auto;
+  }
 }
 .sidebar-toggle {
   display: none;
@@ -2659,8 +2661,20 @@ ul.breadcrumb li:last-child {
 .sidebar-inner {
   background: #000;
 }
+@media (max-width: 991px) {
+  .main {
+    display: block;
+    width: auto;
+  }
+}
 .content {
   display: flex;
+}
+@media (max-width: 991px) {
+  .content {
+    display: block;
+    width: auto;
+  }
 }
 .sidebar-overview-active {
   display: none;
