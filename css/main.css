@@ -2651,6 +2651,7 @@ ul.breadcrumb li:last-child {
 }
 .btn {
   border: none;
+  border-radius: 5px !important;
   background-color: var(--MC);
 }
 .btn:hover {
@@ -2658,11 +2659,11 @@ ul.breadcrumb li:last-child {
   background-color: var(--SC);
 }
 .sidebar {
-  margin-top: 12px;
+  margin-top: 60px;
   position: -webkit-sticky;
   position: sticky;
   top: 12px;
-  width: 320px;
+  width: 250px;
   align-self: flex-start;
   z-index: 30;
 }
@@ -2672,8 +2673,8 @@ ul.breadcrumb li:last-child {
   }
 }
 .main-inner {
-  margin: 0 auto;
-  transform: translateX(-19%);
+  display: block;
+  margin: auto;
 }
 @media (max-width: 991px) {
   .main-inner {
@@ -2722,6 +2723,15 @@ ul.breadcrumb li:last-child {
 }
 .sidebar-overview-active {
   display: none;
+}
+aside.sidebar {
+  width: 0;
+}
+.sidebar-inner {
+  position: relative;
+  right: 0;
+  width: 250px;
+  margin-right: 0;
 }
 .card {
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
